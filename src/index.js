@@ -14,12 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     li.appendChild(button);
     event.preventDefault();
 
-    function removeElement(li) {
-      li.parentNode.removeChild(li)
-    }
-    
-    button.addEventListener("click", removeElement(li));
-    
+    button.addEventListener("click", function(event){
+      event.target.parentNode.remove()
+    })
 
   });
 });
